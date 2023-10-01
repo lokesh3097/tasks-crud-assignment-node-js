@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "4d43ab53-23f7-472d-a957-1603bbb7de2d",
+		"name": "tasks-crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27943630"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/tasks/",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"task\": {\r\n        \"name\": \"Task 25\",\r\n        \"description\": \"This is a sample task 3\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/tasks/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/tasks/?page=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tasks/?page=3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/tasks/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"task\": {\r\n        \"id\": 19,\r\n        \"name\": \"Task 19 Updated\",\r\n        \"description\": \"This is an Updated Task\",\r\n        \"status\": \"inprogress\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/tasks/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/tasks/26",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tasks/26",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"26"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/tasks/count-by-status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tasks/count-by-status",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"count-by-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/tasks/metrics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startMonth\": 5,\r\n    \"startYear\": 2023,\r\n    \"endMonth\": 9,\r\n    \"endYear\": 2023\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/tasks/metrics",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
